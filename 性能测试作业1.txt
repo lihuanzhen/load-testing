@@ -1,0 +1,14 @@
+实现bugfree
+
+一：登录    创建事务和集合点采用
+ 加一个判断，事务的如果返回状态为LR_FAIL，程序终止运行
+if (lr_get_transaction_status() == LR_FAIL) {
+
+     lr_end_transaction("Flight", LR_FAIL);
+     return;
+}
+并且打印出事务的响应时间  lr_get_transaction_duration("Flight"); 
+二、添加bug实现参数化  3条记录的参数化
+把参数化的内容打印再控制台
+    lr_log_message("用户名为:%s",lr_eval_string("{username}"));
+
