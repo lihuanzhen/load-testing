@@ -2,7 +2,7 @@
 
 一：登录    创建事务和集合点采用
  加一个判断，事务的如果返回状态为LR_FAIL，程序终止运行
-if (lr_get_transaction_status() == LR_FAIL) {
+if (lr_get_transaction_status("Flight") == LR_FAIL) {
 
      lr_end_transaction("Flight", LR_FAIL);
      return;
@@ -12,3 +12,9 @@ if (lr_get_transaction_status() == LR_FAIL) {
 把参数化的内容打印再控制台
     lr_log_message("用户名为:%s",lr_eval_string("{username}"));
 
+设置参数
+设置迭代次数
+打印参数
+
+lr_get_transaction_status
+lr_get_transaction_duration需要放在end_transaction之前

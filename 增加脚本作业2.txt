@@ -1,0 +1,12 @@
+作业1：
+webtour
+登录后，建立检查点，查找Welcome，采用web_reg_find
+如果找到，使用lr_out_message 打印出success
+没有找到，使用lr_err_message 打印出Fail
+
+脚本1：正确的用户名，密码
+脚本2：错误的用户名，密码
+把两个脚本分别在Contrller中建立 场景，5个虚拟用户运行，查看运行效果
+
+作业2：
+使用与上下文无关方式录制脚本，并手动建立关联，打印出userSession 
